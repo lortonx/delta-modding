@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         'Delta - 999999 in 1
-// @name:ru      'Delta - 999999 в 1
+// @name         'Delta - 999999 in 1 - Modding
+// @name:ru      'Delta - 999999 в 1 - Modding
 // @description       Delta - extension for agario, agar.io mod collection. Zoom+, macro eject mass, double split, hot-keys, minimap, chat, helpers, themes
 // @description:ru       Delta - расширение для агарио, сборник модов для agar.io. Зум, авто-ц, дабл-сплит, горячие клавиши, мини-карта, чат, подсказки, темы
 // @version      6.4
-// @namespace    delta.agar
+// @namespace    delta.agar.mod
 // @author       neo
 // @icon         https://deltav4.gitlab.io/ext/assets/favicon.ico
 // @match        *://agar.io/*
