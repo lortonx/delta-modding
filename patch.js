@@ -1,6 +1,12 @@
 console.log('hello world')
 const isDelta6 = window.application && window.application.ev
 
+const Resources = new class{
+    constructor(){
+        Texture.texturesMap.set('https://i.imgur.com/79PTcvz.png','https://i.imgur.com/79PTcvz.png')
+    }
+}
+
 const Hooks = new class{
     constructor(){
         if(!isDelta6) return console.error('Is not Delta 6')
@@ -17,10 +23,10 @@ const Hooks = new class{
      * @param {CanvasRenderingContext2D} ctx
      */
     afterDrawCell(ctx, cell, delta, activeTab, multiboxEnabled){
-
+        
     }
     initDrawCellHook(){
-        if(window.drawRender.drawCell)  return console.error('Draw render is not initialised or is not canvas renderer')
+        if(!window.drawRender.drawCell)  return console.error('Draw render is not initialised or is not canvas renderer')
         const self = this
         window.drawRender.drawCell = function(cell, delta, activeTab, multiboxEnabled){
             const ctx = window.drawRender.ctx

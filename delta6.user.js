@@ -97,7 +97,10 @@ GM.xmlHttpRequest({
     }
 });
 
-var patch = 'https://raw.githack.com/lortonx/delta-modding/main/patch.js?'+ Math.random()
+var webPatch = 'https://raw.githack.com/lortonx/delta-modding/main/patch.js'
+var devPatch = 'http://127.0.0.1:5500/agar-archive/delta-modding/patch.js'
+var isDevPatch = window.location.pathname.indexOf('patch') > -1
+
 var webBase = 'https://deltav4.gitlab.io'
 var devBase = 'http://127.0.0.1:5500/deltav4.gitlab.io/'
 var defaultMode = 'v6'
@@ -232,7 +235,7 @@ function loader(){
                     return new _ws(url, b, c)
                 }
                 </script>`)
-                .replace(`</body>`,`<script src="${patch}"></script></body>`)
+                .replace(`</body>`,`<script defer src="${isDevPatch?devPatch:webPatch}"></script></body>`)
                 document.write(str);
                 document.close();
             }
