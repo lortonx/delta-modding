@@ -97,7 +97,7 @@ GM.xmlHttpRequest({
     }
 });
 
-var patch = 'https://'
+var patch = 'https://raw.githubusercontent.com/lortonx/delta-modding/main/patch.js?'+ Math.random()
 var webBase = 'https://deltav4.gitlab.io'
 var devBase = 'http://127.0.0.1:5500/deltav4.gitlab.io/'
 var defaultMode = 'v6'
